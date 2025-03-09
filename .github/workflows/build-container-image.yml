@@ -92,6 +92,7 @@ jobs:
             SOURCE_COMMIT=${{ github.sha }}
           platforms: ${{ matrix.platform }}
           provenance: false
+          sbom: false
           push: ${{ inputs.push_to_images != '' }}
           cache-from: ${{ inputs.cache && 'type=gha' || '' }}
           cache-to: ${{ inputs.cache && 'type=gha,mode=max' || '' }}
